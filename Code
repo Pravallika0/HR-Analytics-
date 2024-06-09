@@ -1,0 +1,32 @@
+install.packages("readxl")
+install.packages("ggplot2")
+library(readxl)
+library(ggplot2)
+HR_comma_sep <- read_excel("C:/BA_HR/HR_ANLYTICS/HR_comma_sep.xlsx")
+View(HR_comma_sep)
+# Remove missing values
+HR_comma_sep <- na.omit(HR_comma_sep)
+summary(HR_comma_sep)
+# Compute correlation matrix
+correlation_matrix <- cor(HR_comma_sep[c("satisfaction_level", "last_evaluation", "average_montly_hours")])
+# Print correlation matrix
+print(correlation_matrix)
+# Perform K-means clustering
+kmeans_model <- kmeans(HR_comma_sep[, c("satisfaction_level", "last_evaluation")], centers = 3)
+# Extract cluster assignments
+cluster_assignments <- kmeans_model$cluster
+# ANOVA
+class(HR_comma_sep)
+# Perform ANOVA analysis
+anova_model <- aov(satisfaction_level ~ sales + salary, data = HR_comma_sep)
+# Summary of the ANOVA model
+summary(anova_model)
+# Bar graph for last_evaluation
+ggplot(HR_comma_sep, aes(x = last_evaluation)) +
+geom_bar()
+# Bar graph for average_monthly_hours
+ggplot(HR_comma_sep, aes(x = average_montly_hours)) +
+geom_bar()
+# Bar graph for satisfaction_level
+ggplot(HR_comma_sep, aes(x = satisfaction_level)) +
+geom_bar()
