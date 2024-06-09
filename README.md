@@ -30,7 +30,8 @@ This project involves the analysis of employee data to gain insights into variou
 ### Prediction of Demand for Hourly Employees
 - Using predictive modeling techniques, the demand for hourly employees for the following month will be predicted based on historical data and relevant features in the dataset.
 
-###Graphs
+
+
 ![image](https://github.com/Pravallika0/HR-Analytics-/assets/117079437/91c89b4b-6de1-4995-9d12-81ad949e43b5)
 ![image](https://github.com/Pravallika0/HR-Analytics-/assets/117079437/28e42e7a-c460-45ca-847c-13a6f66e8c5c)
 ![image](https://github.com/Pravallika0/HR-Analytics-/assets/117079437/d11d7e66-21ba-4b47-9603-c5346665a5ac)
